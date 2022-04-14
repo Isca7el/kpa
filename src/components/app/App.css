@@ -1,0 +1,25 @@
+.app{
+  min-width: 1400px;
+  padding: 50px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.add,
+.delete,
+.test {
+  margin: 10px 20px;
+  padding: 20px;
+  font-style: 2rem;
+}
+
+.border{
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.unborder{
+  border: none;
+  margin-bottom: 10px;
+}

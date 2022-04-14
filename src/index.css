@@ -1,0 +1,56 @@
+/* Обнуление */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+button {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #544837;
+}
