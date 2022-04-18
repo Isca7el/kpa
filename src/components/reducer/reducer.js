@@ -7,7 +7,7 @@ const items = (state = defaultState, action) => {
         case "ADD_ITEM":
             return {...state, list: [...state.list, action.payload]}
         case "DELETE_ITEM":
-            return {...state, list: [...state.list, action.payload]}
+            return {...state, list: state.list.filter(item => !action.payload.ids.includes(item.id))}
         default:
             return state;
     }

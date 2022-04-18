@@ -1,8 +1,18 @@
+import { useDispatch } from "react-redux";
 
+const DeleteBtn = ({id}) => {
+  console.log(id);
+  const dispatch = useDispatch();
 
-const DeleteBtn = () => {
+  const deleteItems = () => {
+    const deleteId = {
+      ids: id
+    }
+
+    dispatch({type: "DELETE_ITEM", payload: deleteId})
+  }
     return (
-        <button className="delete">
+        <button className="delete" onClick={() => deleteItems()}>
         Удалить
       </button>
     )
