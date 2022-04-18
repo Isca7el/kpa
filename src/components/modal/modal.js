@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { v4 as uuid } from 'uuid';
-import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuid } from "uuid";
 import { Store } from 'react-notifications-component';
 
 import './modal.css';
@@ -8,11 +8,6 @@ import './modal.css';
 const Modal = ({active, setActive}) => {
   const [input, setInput] = useState();
   const dispatch = useDispatch();
-  const list = useSelector(state => state.list);
-
-
-  useEffect(() => {
-  }, )
 
   function Push() {
     Store.addNotification({

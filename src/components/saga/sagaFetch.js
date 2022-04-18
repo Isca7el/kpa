@@ -2,7 +2,7 @@ import {put, takeEvery, call} from "redux-saga/effects";
 import { setFetch, FETCH_REQUEST } from "../reducer/saga reducer";
 
 const fetchRequest = () => fetch("https://graphqlzero.almansi.me/api", {
-    "method": "GET",
+    "method": "POST",
     "headers": { "content-type": "application/json", 
     "accept": "application/json",
   },
@@ -14,12 +14,13 @@ const fetchRequest = () => fetch("https://graphqlzero.almansi.me/api", {
         }
       }`
   })
-}).then(res => res.json()).then(console.log)
+})
 
 
 function* fetchRequestWorker() {
     const data = yield call(fetchRequest)
-    yield put(setFetch(data))
+    const json = yield call(() => new Promise(res => res(data.json())))
+    yield put(setFetch(json))
 }
 
 export function* fetchWatcher() {
