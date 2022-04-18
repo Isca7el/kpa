@@ -14,7 +14,7 @@ const fetchRequest = () => fetch("https://graphqlzero.almansi.me/api", {
         }
       }`
   })
-})
+}).then(data => console.log(data))
 
 
 function* fetchRequestWorker() {

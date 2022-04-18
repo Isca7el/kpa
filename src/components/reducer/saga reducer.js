@@ -7,8 +7,8 @@ export const FETCH_REQUEST = "FETCH_REQUEST";
 
 export default function sagaReducer(state = defaultState, action) {
     switch(action.type){
-        case SET_FETCH:
-            return {...state, users: action.payload}
+        case "SET_FETCH":
+            return {...state, fetch: action.payload}
     }
     return state
 }
