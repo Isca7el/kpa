@@ -1,17 +1,16 @@
-import { fetchRequest } from "../reducer/saga reducer";
 import { useDispatch, useSelector } from "react-redux";
+import { getRequest } from "../../redux/actions/actions";
 
 const TestGraph = () => {
     const dispatch = useDispatch();
-    const user = useSelector((state) => state.fetch);
-    
-    function onTest(){
-        dispatch(fetchRequest());
-        console.log(user)
+
+    const handleUsers = () => {
+        dispatch(getRequest())
     }
+
     return (
         <button className="test"
-        onClick={onTest}>
+        onClick={handleUsers}>
             Тест GraphQL
         </button>
     )

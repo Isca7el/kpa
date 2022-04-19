@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from './components/store';
+import store from './redux/store/store';
 import { ReactNotifications } from 'react-notifications-component';
 
 import ReactDOM from 'react-dom';

@@ -3,8 +3,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 const List = ({handleIID}) => {
-  const [selectedItems, setSelectedItems] = React.useState(new Set());
-  const list = useSelector((state) => state.list);
+  const list = useSelector((state) => state.list.list);
   const [term, setTerm] = useState([]);
 
   const TooggleSwitch = (e) => {
