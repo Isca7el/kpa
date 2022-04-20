@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from "uuid";
 import { Store } from 'react-notifications-component';
+import { addItem } from '../../redux/actions/actions';
 
 import './modal.css';
 
@@ -45,7 +46,7 @@ const Modal = ({active, setActive}) => {
       id: uuid()
     }
     
-    dispatch({type: "ADD_ITEM", payload: listItem})
+    dispatch({ type: "ADD_ITEM", payload: listItem })
   }
 
   const applyFunc = () => {

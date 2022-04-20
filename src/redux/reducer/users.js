@@ -1,13 +1,13 @@
 import { SET_USERS } from "./constants";
 
 const initialState = {
-  list: [],
+  users: [],
 };
 
 const users = (state = initialState, { type, payload }) => {
   switch (type) {
     case SET_USERS:
-      return { ...state, users: [...state.users, ...payload] };
+      return { ...state, users: [...state.users, payload] };
     default:
       return state;
   }

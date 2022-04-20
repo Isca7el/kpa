@@ -1,11 +1,11 @@
-import { takeEvery, put } from 'redux-saga/effects'
+import { takeEvery, put, call } from 'redux-saga/effects'
 import { getUsers } from "../../api";
 import { GET_REQUEST } from '../reducer/constants';
 import { setUsers } from '../actions/actions';
 
 export function* workerSaga() {
-    const data = yield getUsers();
-    console.log(data)
+    const { data } = yield call(getUsers);
+    yield put(setUsers(data));
 }
 
 export  function* watchSaga() {

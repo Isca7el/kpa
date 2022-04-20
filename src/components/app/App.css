@@ -1,4 +1,4 @@
-.app{
+.app {
   min-width: 1400px;
   padding: 50px;
   margin: 0 auto;
@@ -14,12 +14,21 @@
   font-style: 2rem;
 }
 
-.border{
+.list {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.border {
+  width: 200px;
   border: 1px solid #000;
   margin-bottom: 10px;
 }
 
-.unborder{
+.unborder {
+  width: 200px;
   border: none;
   margin-bottom: 10px;
 }

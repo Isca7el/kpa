@@ -1,7 +1,7 @@
-export const getUsers = () => {
-  fetch("https://graphqlzero.almansi.me/api", {
+export const getUsers = async () => {
+  const request = await fetch("https://graphqlzero.almansi.me/api", {
     method: "POST",
-    headers: { "content-type": "application/json"},
+    headers: { "content-type": "application/json", accept: "application/json" },
     body: JSON.stringify({
       query: `{
           user(id: 1) {
@@ -10,9 +10,8 @@ export const getUsers = () => {
           }
         }`,
     }),
-  }).then(response => {
-    return response.json();
   })
+  return await request.json();
 };
 
 

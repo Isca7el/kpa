@@ -15,5 +15,5 @@ export const getRequest = () => ({
 
 export const setUsers = (payload) => ({
     type: SET_USERS,
-    payload
+    payload,
 });
